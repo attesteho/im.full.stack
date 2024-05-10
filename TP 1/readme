@@ -1,0 +1,75 @@
+TP/
+│
+├── controllers/
+│   └── main_controller.go
+│
+│
+├── views/
+│   ├── accueil.html
+│   ├── services.html
+│   ├── projects.html
+│   └── contact.html
+│
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── images/
+│   │   ├── project1.jpg
+│   │   ├── project2.jpg
+│   │   └── ...
+│   └── js/
+│       └── jqueryjs
+│       ├── bootstrap.js       
+│       ├── custom.js
+│
+└── main.go
+
+
+
+Le système MVC (Modèle-Vue-Contrôleur) est un modèle de conception couramment 
+utilisé dans le développement web pour organiser et structurer le code d'une application. 
+Il divise l'application 
+en trois composants principaux : le modèle, la vue et le contrôleur.
+
+Voici une explication détaillée de chaque composant dans le contexte de 
+la structure que vous avez fournie :
+
+Modèle (Model) :
+Dans le contexte de votre structure, le modèle représente la couche de données de votre application. 
+Cela peut inclure la logique métier, les requêtes à la base de données, et la gestion des données.
+Dans votre cas, le modèle n'est pas explicitement représenté dans la structure fournie. Cependant, 
+dans une application Go typique, le modèle pourrait être représenté par des structures de données 
+définies 
+dans des fichiers séparés, ou par des packages spécifiques 
+pour gérer les opérations liées à la base de données.
+
+Vue (View) :
+Les vues sont responsables de la présentation des données aux utilisateurs. 
+Elles affichent l'interface utilisateur de l'application.
+Dans votre structure, les fichiers HTML dans le dossier views/ représentent 
+les vues de votre application. 
+Chaque fichier HTML représente une page ou un composant de l'interface utilisateur.
+
+Contrôleur (Controller) :
+Les contrôleurs sont responsables de la gestion des requêtes des utilisateurs, de l'interaction avec le modèle 
+et de la sélection de la vue appropriée pour afficher les données.
+Dans votre structure, les fichiers dans le dossier controllers/ 
+représentent les contrôleurs de votre application. 
+Par exemple, main_controller.go contient le code pour gérer 
+les requêtes liées aux différentes pages de votre application.
+
+Voici comment fonctionne le flux de données dans le système MVC :
+
+Lorsqu'un utilisateur envoie une requête, elle est dirigée vers le contrôleur correspondant.
+Le contrôleur traite la requête, effectue les opérations nécessaires sur les données 
+(généralement en interagissant avec le modèle)
+ et sélectionne la vue appropriée à afficher.
+La vue reçoit les données traitées du contrôleur et les affiche à l'utilisateur.
+
+L'utilisateur interagit avec l'interface utilisateur, envoyant éventuellement une nouvelle requête,
+ et le processus se répète.
+Dans votre structure, le fichier main.go pourrait être utilisé pour démarrer le serveur 
+HTTP et gérer les routes des différentes pages vers les contrôleurs correspondants.
+ Les fichiers HTML, 
+CSS et JavaScript dans les dossiers views/ et static/
+ sont utilisés pour définir l'interface utilisateur et son comportement.
